@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daiyan_Exe // Cyber Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- সাইবারপাংক ব্যাকগ্রাউন্ড গ্রিড ইফেক্ট -->
+    <div class="cyber-grid"></div>
+
+    <div class="portfolio-container">
+        <!-- মেইন গ্লোয়িং হেডার সেকশন -->
+        <header class="hacker-header">
+            <h1 class="neon-title" data-text="DAIYAN_EXE">DAIYAN_EXE</h1>
+            <p class="subtitle">> SYSTEM STATUS: <span class="status-online">ONLINE</span></p>
+        </header>
+
+        <!-- প্রোফাইল মেইন ডেসক্রিপশন উইথ টাইপিং ইফেক্ট -->
+        <main class="console-box">
+            <div class="console-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <p class="console-title">root@daiyanexe:~</p>
+            </div>
+            <div class="console-body">
+                <p class="typewriter">> Hi, I am Daiyan.</p>
+                <p class="typewriter delay-1">> A 16-year-old Front-End Developer & Math Enthusiast.</p>
+                <p class="typewriter delay-2">> Specializing in JavaScript Canvas Physics & Minimal Cyber Design.</p>
+                <p class="typewriter delay-3">> Current Mission: Mastering Advanced Logics and Core Web Systems.</p>
+            </div>
+                    <!-- কাস্টম নিয়ন স্ন্যাক প্রজেক্ট বাটন -->
+        <div class="project-action-zone">
+            <!-- href এর ভেতরে আপনার সাপের index.html ফাইলের সঠিক পাথ/রাস্তাটি দিয়ে দেবেন -->
+            <a href="../WallpaperCreation/index.html" class="neon-btn" target="_blank">> LAUNCH_NEON_SNAKE_CORE</a>
+        </div>
+        </main>
+            <!-- ---------- হ্যাকার ম্যাথ সলভার উইজেট ---------- -->
+        <section class="calculator-core">
+            <h2 class="section-title">// MATH_SOLVER_MODULE_ACTIVE</h2>
+            <div class="calc-wrapper">
+                <!-- ডিসপ্লে মনিটর -->
+                <div class="calc-screen">
+                    <div class="calc-mode">> TRIGONOMETRIC_ENG_v1.0</div>
+                    <input type="text" id="calc-display" readonly placeholder="0.0000">
+                </div>
+                <!-- আপগ্রেডেড বাটন গ্রিড লেআউট -->
+                <div class="calc-buttons">
+                    <button class="btn-cyan" onclick="pressCalc('sin(')">SIN</button>
+                    <button class="btn-cyan" onclick="pressCalc('cos(')">COS</button>
+                    <button class="btn-cyan" onclick="pressCalc('tan(')">TAN</button>
+                    <button class="btn-red" onclick="clearCalc()">CLEAR</button>
+
+                    <!-- নতুন ফিচার বোতামসমূহ -->
+                    <button class="btn-cyan" onclick="pressCalc('sqrt(')">√</button>
+                    <button class="btn-cyan" onclick="pressCalc('sqr(')">x²</button>
+                    <button class="btn-cyan" onclick="pressCalc('π')">π</button>
+                    <button class="btn-green" onclick="pressCalc('/')">/</button>
+
+                    <button class="btn-num" onclick="pressCalc('7')">7</button>
+                    <button class="btn-num" onclick="pressCalc('8')">8</button>
+                    <button class="btn-num" onclick="pressCalc('9')">9</button>
+                    <button class="btn-green" onclick="pressCalc('*')">*</button>
+
+                    <button class="btn-num" onclick="pressCalc('4')">4</button>
+                    <button class="btn-num" onclick="pressCalc('5')">5</button>
+                    <button class="btn-num" onclick="pressCalc('6')">6</button>
+                    <button class="btn-green" onclick="pressCalc('-')">-</button>
+
+                    <button class="btn-num" onclick="pressCalc('1')">1</button>
+                    <button class="btn-num" onclick="pressCalc('2')">2</button>
+                    <button class="btn-num" onclick="pressCalc('3')">3</button>
+                    <button class="btn-green" onclick="pressCalc('+')">+</button>
+
+                    <button class="btn-num" onclick="pressCalc('0')">0</button>
+                    <button class="btn-num" onclick="pressCalc('.')">.</button>
+                    <button class="btn-num" onclick="pressCalc(')')">)</button>
+                    <button class="btn-equal" onclick="solveEquation()">= EXECUTE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- কোডিং স্কিল কার্ডস -->
+        <section class="skills-section">
+            <h2 class="section-title">// ACTIVE_MODULES_</h2>
+            <div class="skills-grid">
+                <div class="skill-card cyan">
+                    <h3>HTML5 / CSS3</h3>
+                    <p>Core structures and layout architectures.</p>
+                </div>
+                <div class="skill-card red">
+                    <h3>JAVASCRIPT</h3>
+                    <p>Dynamic physics, triggers, and state logics.</p>
+                </div>
+                <div class="skill-card green">
+                    <h3>MATH & LOGIC</h3>
+                    <p>Trigonometric formulas & advanced vector spaces.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

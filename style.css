@@ -1,0 +1,286 @@
+/* ---------- গ্লোবাল সাইবারপাংক থিম রিসেট ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #0d0d13;
+    color: #e0e0e6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ব্যাকগ্রাউন্ড ডিজিটাল ম্যাট্রিক্স গ্রিড */
+.cyber-grid {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+}
+
+/* কন্টেইনার আর্কিটেকচার */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ---------- নিয়ন গ্লো হেডার সেটিংস ---------- */
+.hacker-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.neon-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #00ffff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+    position: relative;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #888899;
+    margin-top: 10px;
+}
+
+.status-online {
+    color: #00ff66;
+    text-shadow: 0 0 8px #00ff66;
+    font-weight: bold;
+}
+
+/* ---------- হ্যাকার কনসোল বক্স উইন্ডো ---------- */
+.console-box {
+    background: rgba(20, 20, 30, 0.85);
+    border: 1px solid #ff0055;
+    box-shadow: 0 0 20px rgba(255, 0, 85, 0.25);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.console-bar {
+    background: #1a1a26;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 0, 85, 0.3);
+}
+
+.dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.console-title {
+    color: #666688;
+    font-size: 0.85rem;
+    margin-left: 10px;
+}
+
+.console-body {
+    padding: 25px;
+    min-height: 180px;
+}
+
+/* টাইপরাইটার ফাস্ট ডাইনামিক অ্যানিমেশন */
+.typewriter {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #ff0055;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards, blink 0.75s step-end infinite;
+    margin-bottom: 12px;
+    color: #ff0055;
+    font-size: 1.1rem;
+}
+
+.delay-1 { animation-delay: 1.5s; color: #00ffff; border-right-color: #00ffff; }
+.delay-2 { animation-delay: 3s; color: #e0e0e6; border-right-color: #e0e0e6; }
+.delay-3 { animation-delay: 4.5s; color: #00ff66; border-right-color: #00ff66; }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: inherit }
+}
+
+/* ---------- একটিভ মডিউল কার্ডস ---------- */
+.section-title {
+    font-size: 1.4rem;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: rgba(15, 15, 25, 0.9);
+    padding: 25px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    color: #888899;
+    line-height: 1.4;
+}
+
+.skill-card.cyan { border-left: 4px solid #00ffff; box-shadow: inset 0 0 10px rgba(0,255,255,0.05); }
+.skill-card.cyan h3 { color: #00ffff; }
+.skill-card.red { border-left: 4px solid #ff0055; box-shadow: inset 0 0 10px rgba(255,0,85,0.05); }
+.skill-card.red h3 { color: #ff0055; }
+.skill-card.green { border-left: 4px solid #00ff66; box-shadow: inset 0 0 10px rgba(0,255,102,0.05); }
+.skill-card.green h3 { color: #00ff66; }
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+/* ---------- কাস্টম নিয়ন বাটন সেকশন ---------- */
+.project-action-zone {
+    text-align: center;
+    margin: 35px 0 50px 0;
+}
+
+.neon-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid #00ffff;
+    border-radius: 4px;
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* মাউস ধরলে (Hover) বাটন যেভাবে ভেনম-স্পাইডারম্যান স্টাইলে নিয়ন ভাইব দেবে */
+.neon-btn:hover {
+    color: #0d0d13;
+    background: #00ffff;
+    box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+    transform: scale(1.05);
+}
+/* ---------- সাইবারপাংক ক্যালকুলেটর আর্কিটেকচার ---------- */
+.calculator-core {
+    margin-bottom: 50px;
+}
+
+.calc-wrapper {
+    background: rgba(15, 15, 25, 0.95);
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 25px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* গ্লোয়িং সায়ান ডিসপ্লে স্ক্রিন */
+.calc-screen {
+    background: #06060a;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.calc-mode {
+    color: #666688;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+
+#calc-display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #00ffff;
+    font-size: 1.8rem;
+    text-align: right;
+    text-shadow: 0 0 8px #00ffff;
+}
+
+/* বাটন গ্রিড লেআউট সেটিংস */
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.calc-buttons button {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #14141f;
+    border: 1px solid #262636;
+    color: #e0e0e6;
+}
+
+/* কাস্টম নিয়ন কালার ভ্যারিয়েশনস */
+.btn-cyan { color: #00ffff !important; border-color: rgba(0,255,255,0.3) !important; }
+.btn-cyan:hover { background: #00ffff !important; color: #0d0d13 !important; box-shadow: 0 0 15px #00ffff; }
+
+.btn-green { color: #00ff66 !important; border-color: rgba(0,255,102,0.3) !important; }
+.btn-green:hover { background: #00ff66 !important; color: #0d0d13 !important; box-shadow: 0 0 15px #00ff66; }
+
+.btn-red { color: #ff0055 !important; border-color: rgba(255,0,85,0.3) !important; }
+.btn-red:hover { background: #ff0055 !important; color: #e0e0e6 !important; box-shadow: 0 0 15px #ff0055; }
+
+.btn-num:hover { background: #262636; color: #fff; }
+
+/* সলভার এক্সিকিউট বাটন */
+.btn-equal {
+    grid-column: span 4;
+    background: rgba(0, 255, 255, 0.08) !important;
+    border: 1px solid #00ffff !important;
+    color: #00ffff !important;
+    letter-spacing: 2px;
+    font-size: 0.95rem !important;
+}
+
+.btn-equal:hover {
+    background: #00ffff !important;
+    color: #0d0d13 !important;
+    box-shadow: 0 0 25px #00ffff;
+    transform: scale(1.02);
+}
+.btn-equal {
+    grid-column: span 1 !important; /* ৪ কলামের বদলে এখন ১ কলামে মানিয়ে যাবে */
+}
